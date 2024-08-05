@@ -1,0 +1,92 @@
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+  }
+  h1 {
+    color: #333;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+    max-width: 500px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  .form .default_price {
+    display: flex;
+    flex-direction: row;
+  }
+  .default_price input {
+    width: 60%;
+  }
+
+  .form label {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  button {
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    background-color: #00796b;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  button:hover {
+    background-color: #004d40;
+  }
+  .result {
+    margin: 20px 0;
+    width: 90%;
+    max-width: 500px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .result > div {
+    margin: 10px 0;
+  }
+  .result div p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+  }
+  .price-box,
+  .cut-box,
+  .cut-price-box {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  .price-box {
+    background-color: #e8f5e9;
+  }
+  .cut-box {
+    background-color: #ffe0b2;
+  }
+  .cut-price-box {
+    background-color: #c5cae9;
+  }

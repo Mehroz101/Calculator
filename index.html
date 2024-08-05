@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Price Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <h1>Price Calculator</h1>
+    <div class="form">
+      <input type="number" placeholder="Weight (kg)" id="input-weight" />
+      <div class="default_price">
+        <div class="default-cut-w">
+          <input
+            type="number"
+            placeholder="Cut Weight per 40kg (kg)"
+            id="input-cut-weight"
+            value="2"
+          />
+          <p>cut</p>
+        </div>
+        <div class="default-price">
+          <input
+            type="number"
+            placeholder="Price per 40kg"
+            id="input-price-per-40kg"
+            value="100"
+          />
+          <p>price</p>
+        </div>
+        <div class="default-clean">
+          <input
+            type="number"
+            placeholder="Clean Price per 40kg"
+            id="input-clean-price"
+            value="50"
+          />
+          <p>clean</p>
+        </div>
+        <div class="default-clean">
+          <input
+            type="number"
+            placeholder="Clean Price per 40kg"
+            id="input-atta-price"
+            value="100"
+          />
+          <p>Atta price</p>
+        </div>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" id="clean-check" />
+        <label for="clean-check">Include Clean Price</label>
+      </div>
+      <button id="btn">Calculate</button>
+    </div>
+    <div class="result">
+      <div class="cut-price-box">
+        <p class="price">Price: <span id="price-span">0</span></p>
+        <p class="cut">Cut Weight: <span id="cut-span">0</span> kg</p>
+      </div>
+      <div class="cut-box">
+        <p class="w-cut">Without Cut: <span id="w-cut-span">0</span></p>
+      </div>
+      <div class="price-box">
+        <p class="i-price">
+          Include Price: <span id="i-price-span">0</span> kg
+        </p>
+      </div>
+    </div>
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js', { scope: '/' })
+              .then((registration) => {
+                console.log('Service Worker registered with scope:', registration.scope);
+              })
+              .catch((error) => {
+                console.error('Service Worker registration failed:', error);
+              });
+          });
+        }
+      </script>
+      
+      
+    <script src="./js/app.js"></script>
+  </body>
+</html>
